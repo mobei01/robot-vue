@@ -1,0 +1,64 @@
+.el-aside {
+  color: var(--el-text-color-primary);
+  height: 100vh;
+  background-color: white;
+  /* box-shadow: 2px 2px 10px rgba(19, 17, 24, 0.2); */
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #f2f2f2;
+}
+
+.layout-main {
+  overflow-x: hidden;
+  flex: 1;
+  overflow-y: auto;
+}
+
+.aside-top {
+  height: calc(100vh - 60px);
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.user-box {
+  background: #fff;
+  padding: 20px 0;
+  text-align: center;
+  background-color: #aaaaaa;
+}
+
+.el-breadcrumb {
+  margin-top: 20px;
+}
+
+.el-header {
+  border-bottom: 1px solid #ddd;
+}
+
+.el-main {
+  height: calc(100vh - 60px);
+}
+
+.title {
+  font-weight: bold;
+  font-size: 22px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout {
+  width: 100%;
+}
+
+.is-active {
+  background-color: rgba(215, 215, 215);
+  color: #222;
+  border-radius: 3px;
+}
