@@ -1,6 +1,5 @@
 import { RouteRecordRaw } from 'vue-router';
-import userRouter from './modules/user';
-import epsRouter from './modules/eps';
+import articleRouter from './modules/articleList';
 
 const routes: RouteRecordRaw[] = [
   {
@@ -13,8 +12,7 @@ const routes: RouteRecordRaw[] = [
     path: '/register',
     component: () => import('@/views/register/Register.vue')
   },
-  ...userRouter,
-  ...epsRouter
+  ...articleRouter
 ];
 
 export default routes;

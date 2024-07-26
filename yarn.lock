@@ -3956,11 +3956,6 @@ scule@^1.0.0:
   resolved "https://registry.npmjs.org/scule/-/scule-1.0.0.tgz"
   integrity sha512-4AsO/FrViE/iDNEPaAQlb77tf0csuq27EsVpy6ett584EcRTp6pTDLoGWVxCD77y5iU5FauOvhsI4o1APwPoSQ==
 
-sdp@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.npmjs.org/sdp/-/sdp-3.2.0.tgz"
-  integrity sha512-d7wDPgDV3DDiqulJjKiV2865wKsJ34YI+NDREbm+FySq6WuKOikwyNQcm+doLAZ1O6ltdO0SeKle2xMpN3Brgw==
-
 semver@^5.6.0:
   version "5.7.2"
   resolved "https://registry.npmjs.org/semver/-/semver-5.7.2.tgz"
@@ -4201,11 +4196,6 @@ thenify-all@^1.0.0:
   dependencies:
     any-promise "^1.0.0"
 
-tim-js-sdk@^2.27.5:
-  version "2.27.5"
-  resolved "https://registry.npmjs.org/tim-js-sdk/-/tim-js-sdk-2.27.5.tgz"
-  integrity sha512-yC0s+sgudwAyiEhaOthNssYbEPTmXF+Q/8vgKT99Xu2L5BUTsQ+r1xRc6mGY5sDrkG7L52yYN+czLSxQWc9ufA==
-
 titleize@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/titleize/-/titleize-3.0.0.tgz"
@@ -4228,13 +4218,6 @@ totalist@^3.0.0:
   resolved "https://registry.npmjs.org/totalist/-/totalist-3.0.1.tgz"
   integrity sha512-sf4i37nQ2LBx4m3wB74y+ubopq6W/dIzXg0FDGjsYnZHVa1Da8FH853wlL2gtUhg+xJXjfk3kUZS3BRoQeoQBQ==
 
-trtc-js-sdk@^4.15.14:
-  version "4.15.14"
-  resolved "https://registry.npmjs.org/trtc-js-sdk/-/trtc-js-sdk-4.15.14.tgz"
-  integrity sha512-VY4qO+VDKx9yP/N2SdjoNFTyXlTU6hTAnbrnF60R1eUI+bwA9zUOfBkRHOlhMqo3IyG4L/OwJhHsjSQVhFTcRw==
-  dependencies:
-    webrtc-adapter "^8.2.3"
-
 ts-api-utils@^1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/ts-api-utils/-/ts-api-utils-1.0.2.tgz"
@@ -4244,11 +4227,6 @@ ts-interface-checker@^0.1.9:
   version "0.1.13"
   resolved "https://registry.npmjs.org/ts-interface-checker/-/ts-interface-checker-0.1.13.tgz"
   integrity sha512-Y/arvbn+rrz3JCKl9C4kVNfTfSm2/mEp5FSz5EsZSANGPSlQrpRI5M4PKF+mJnE52jOO90PnPSc3Ur3bTQw0gA==
-
-tsignaling@^1.0.7:
-  version "1.0.7"
-  resolved "https://registry.npmjs.org/tsignaling/-/tsignaling-1.0.7.tgz"
-  integrity sha512-gWb90XURB4p1rfJ2T8zAHm8tTdTEqlEP+l2OByWZo1WsQvNpNLynWkutxYVCPKz1+hltvTMvXhmhkc/evnzOdw==
 
 tslib@^1.8.1:
   version "1.14.1"
@@ -4554,13 +4532,6 @@ webpack-virtual-modules@^0.5.0:
   version "0.5.0"
   resolved "https://registry.npmjs.org/webpack-virtual-modules/-/webpack-virtual-modules-0.5.0.tgz"
   integrity sha512-kyDivFZ7ZM0BVOUteVbDFhlRt7Ah/CSPwJdi8hBpkK7QLumUqdLtVfm/PX/hkcnrvr0i77fO5+TjZ94Pe+C9iw==
-
-webrtc-adapter@^8.2.3:
-  version "8.2.3"
-  resolved "https://registry.npmjs.org/webrtc-adapter/-/webrtc-adapter-8.2.3.tgz"
-  integrity sha512-gnmRz++suzmvxtp3ehQts6s2JtAGPuDPjA1F3a9ckNpG1kYdYuHWYpazoAnL9FS5/B21tKlhkorbdCXat0+4xQ==
-  dependencies:
-    sdp "^3.2.0"
 
 which@^2.0.1:
   version "2.0.2"
