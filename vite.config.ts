@@ -27,9 +27,9 @@ export default function (): UserConfigExport {
   return {
     server: {
       // host: '0.0.0.0', // 解决不能通过ip访问
-      proxy: {
-        '/lbx-ms-prescription-router': 'https://test-rc-app.lbxcn.com'
-      }
+      // proxy: {
+      //   '/lbx-ms-prescription-router': 'https://test-rc-app.lbxcn.com'
+      // }
     },
     css: {
       preprocessorOptions: {

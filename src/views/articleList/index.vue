@@ -76,8 +76,9 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue';
-import axios from 'axios';
 import { ElMessage } from 'element-plus';
+
+import { getArticleList, saveArticle, sendNewsApi } from '@/api/article';
 
 const currentPage = ref(1);
 const pageSize = ref(10);
@@ -102,37 +103,27 @@ const showPushDialogVisible = ref(false);
 let selectedRow = ref<any>(null);
 
 const fetchList = async (page: number = currentPage.value) => {
-  try {
-    const response = await axios.get(
-      'http://localhost:3008/page/getArticleList',
-      {
-        params: { page, pageSize: pageSize.value }
-      }
-    );
-    const { lists, total: totalCount } = response.data || {};
-    currentLinks.value = lists || [];
-    total.value = totalCount || 0;
-  } catch (error) {
-    console.error(error);
-  }
+  const { data } = await getArticleList({
+    page,
+    pageSize: pageSize.value
+  });
+  const { lists, total: totalCount } = data.value;
+  currentLinks.value = lists || [];
+  total.value = totalCount || 0;
 };
 
 const addLink = () => {
   addFormRef.value.validate(async (valid: any) => {
     if (valid) {
-      try {
-        await axios.post(
-          'http://localhost:3008/page/saveArticle',
-          addForm.value
-        );
-        ElMessage.success('保存成功');
-        addFormRef.value.resetFields();
-        showAddDialog.value = false;
-        fetchList(currentPage.value);
-      } catch (error) {
-        console.error(error);
+      const { error } = await saveArticle(addForm.value);
+      if (error) {
         ElMessage.error('保存失败');
+        return;
       }
+      ElMessage.success('保存成功');
+      addFormRef.value.resetFields();
+      showAddDialog.value = false;
+      fetchList(currentPage.value);
     }
   });
 };
@@ -155,20 +146,20 @@ const pushContent = async () => {
 };
 const sendNews = async () => {
   const { url, title } = selectedRow.value || {};
-  try {
-    const payload = {
-      ...pushForm.value,
-      url,
-      title
-    };
-    await axios.post('http://localhost:3008/wechat/sendNews', payload);
-    ElMessage.success('推送成功');
-    pushFormRef.value?.resetFields?.();
-    showPushDialogVisible.value = false;
-  } catch (error) {
-    console.error(error);
+
+  const payload = {
+    ...pushForm.value,
+    url,
+    title
+  };
+  const { error } = await sendNewsApi(payload);
+  if (error) {
     ElMessage.error('推送失败');
+    return;
   }
+  ElMessage.success('推送成功');
+  pushFormRef.value?.resetFields?.();
+  showPushDialogVisible.value = false;
 };
 
 onMounted(() => {

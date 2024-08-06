@@ -46,18 +46,15 @@ instance.interceptors.response.use(
    */
   (response) => {
     const res = response.data;
-    console.log('res', res);
+    console.log('res', res, response);
 
     // if the custom code is not 200, it is judged as an error.
-    if (res.code !== 0) {
+    if (response.status !== 200) {
       ElMessage.error(res.msg);
-      // 412: Token expired;
-      // if (res.code === 412) {
-      //   store.dispatch('user/userLogout');
-      // }
+
       return Promise.reject(res.msg || 'Error');
     } else {
-      return res;
+      return response;
     }
   },
   (error) => {
